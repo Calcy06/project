@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/main.dir/main.c.o CMakeFiles/main.dir/student_timer.c.o CMakeFiles/main.dir/student_list.c.o  -o main  -lubox -luci 

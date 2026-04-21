@@ -1,0 +1,4 @@
+/root/test/uci/build/CMakeFiles/rebuild_cache.dir
+/root/test/uci/build/CMakeFiles/edit_cache.dir
+/root/test/uci/build/CMakeFiles/main.dir
+/root/test/uci/build/CMakeFiles/student_write.dir

@@ -1,0 +1,61 @@
+
+config student 's0'
+	option name 'zhangsan'
+	option chinese '99'
+	option math '85'
+	option english '95'
+
+config student 's1'
+	option name 'lisi'
+	option chinese '88'
+	option math '92'
+	option english '80'
+
+config student 's2'
+	option name 'wangwu'
+	option chinese '78'
+	option math '99'
+	option english '85'
+
+config student 's3'
+	option name 'zhaoliu'
+	option chinese '95'
+	option math '70'
+	option english '88'
+
+config student 's4'
+	option name 'sunqi'
+	option chinese '82'
+	option math '88'
+	option english '90'
+
+config student 's5'
+	option name 'zhouba'
+	option chinese '75'
+	option math '80'
+	option english '85'
+
+config student 's6'
+	option name 'wujiu'
+	option chinese '91'
+	option math '95'
+	option english '92'
+
+config student 's7'
+	option name 'zhengshi'
+	option chinese '80'
+	option math '78'
+	option english '85'
+
+config student 's8'
+	option name 'liuyi'
+	option chinese '87'
+	option math '82'
+	option english '90'
+
+config student 's9'
+	option name 'chener'
+	option chinese '93'
+	option math '90'
+	option english '88'
+

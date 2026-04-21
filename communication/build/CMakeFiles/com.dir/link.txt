@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/com.dir/main.c.o CMakeFiles/com.dir/usock/usock.c.o CMakeFiles/com.dir/stdin/stdin.c.o CMakeFiles/com.dir/read/read.c.o  -o com  -lubox -luci 

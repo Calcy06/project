@@ -1,0 +1,39 @@
+config student 's1'
+        option name '牛一'
+        option id '2026001'
+
+config student 's2'
+        option name '牛二'
+        option id '2026002'
+
+config student 's3'
+        option name '牛三'
+        option id '2026003'
+
+config student 's4'
+        option name '牛四'
+        option id '2026004'
+
+config student 's5'
+        option name '牛五'
+        option id '2026005'
+
+config student 's6'
+        option name '牛六'
+        option id '2026006'
+
+config student 's7'
+        option name '牛七'
+        option id '2026007'
+
+config student 's8'
+        option name '牛八'
+        option id '2026008'
+
+config student 's9'
+        option name '牛九'
+        option id '2026009'
+
+config student 's10'
+        option name '牛十'
+        option id '2026010'

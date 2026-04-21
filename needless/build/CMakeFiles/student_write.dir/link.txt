@@ -1,0 +1,1 @@
+/usr/bin/cc    CMakeFiles/student_write.dir/student_write.c.o  -o student_write  -luci 

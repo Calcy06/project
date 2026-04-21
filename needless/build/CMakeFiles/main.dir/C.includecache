@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/root/test/uci/main.c
+libubox/uloop.h
+-
+
+/root/test/uci/student.h
+uci.h
+-
+libubox/list.h
+-
+stddef.h
+-
+
+/root/test/uci/student_list.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+student.h
+/root/test/uci/student.h
+
+/root/test/uci/student_timer.c
+stdio.h
+-
+unistd.h
+-
+libubox/uloop.h
+-
+
