@@ -1,10 +1,11 @@
 #include "read_uci.h"
 
 char *name;
+int serial_type;
 int speed;
 int data_bits;
 int stop_bits;
-char check_bits;
+char check_bits[2];
 struct list_head sensor_list;
 
 // 读取传感器配置
@@ -69,6 +70,8 @@ static void read_uci_serial()
         if (strcmp(sec->type, "serial") == 0)
         {
             // 读取数据
+            const char *n = uci_lookup_option_string(ctx, sec, "name");
+            const char *t = uci_lookup_option_string(ctx, sec, "serial_type");
             const char *s = uci_lookup_option_string(ctx, sec, "speed");
             const char *d = uci_lookup_option_string(ctx, sec, "data_bits");
             const char *st = uci_lookup_option_string(ctx, sec, "stop_bits");
@@ -76,19 +79,29 @@ static void read_uci_serial()
 
             // 赋值
             name = strdup(n ? n : "NoName");
+            serial_type = t ? atoi(t) : 0;
             speed = s ? atoi(s) : 9600;
             data_bits = data_bits_str ? atoi(data_bits_str) : 8;
             stop_bits = stop_bits_str ? atoi(stop_bits_str) : 1;
-            check_bits = check_bits_str ? check_bits_str[0] : 'N';
+            if (check_bits_str)
+            {
+                check_bits[0] = check_bits_str[0];
+                check_bits[1] = '\0';
+            }
+            else
+            {
+                check_bits[0] = 'N';
+                check_bits[1] = '\0';
+            }
+        }
+        uci_unload(ctx, pkg);
+        uci_free_context(ctx);
     }
-    uci_unload(ctx, pkg);
-    uci_free_context(ctx);
-}
 
-void read_uci()
-{
-    // 读取传感器的从站地址和名字
-    read_uci_sensor();
-    // 读取总线数据
-    read_uci_serial();
-}
+    void read_uci()
+    {
+        // 读取传感器的从站地址和名字
+        read_uci_sensor();
+        // 读取总线数据
+        read_uci_serial();
+    }

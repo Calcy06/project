@@ -13,7 +13,8 @@
 
 struct list_head sensor_list;
 
-struct sensor_node {
+struct sensor_node
+{
     int slave;
     char *name;
     struct list_head list;
