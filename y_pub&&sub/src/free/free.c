@@ -1,4 +1,6 @@
-// 统一释放所有资源：链表 + 串口配置 + Modbus硬件
+#include "free.h"
+
+// 统一释放所有资源
 void free_all_resources(void)
 {
     struct my_node *node, *tmp;

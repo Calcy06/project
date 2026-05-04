@@ -1,6 +1,6 @@
-#include "read_sg/read_sg.h"
+#include "read_sg.h"
 
-void read_sg()
+int read_sg()
 {
     int regs = 0;           // 读取到的寄存器数量
     int i = 0;              // 循环计数器
@@ -16,9 +16,10 @@ void read_sg()
             
                 return -1;
             }
-            break;
+            return (int)buf2[0]; // 返回读取到的第一个寄存器的值
         }
     }
     
-    return ;
+    printf("没有找到SHENGGUANG传感器\n");
+    return -1; 
 }

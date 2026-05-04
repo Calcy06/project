@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include <modbus/modbus.h>
 #include <libubox/uloop.h>
-#include "read_uci/read_uci.h"
+#include "read_uci.h"
 
 typedef struct modbus_serial_s
 {

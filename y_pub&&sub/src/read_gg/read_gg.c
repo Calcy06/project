@@ -1,6 +1,6 @@
-#include "read_gg/read_gg.h"
+#include "read_gg.h"
 
-void read_gg()
+int read_gg()
 {
     int regs = 0;           // 读取到的寄存器数量
     int i = 0;              // 循环计数器
@@ -13,17 +13,19 @@ void read_gg()
             // 读取Modbus寄存器
             // 参数1：Modbus上下文（ctx）
             // 参数2：起始寄存器地址（0x01）
-            // 参数3：读取寄存器的数量（0x03）
-            // 参数4：用于存储读取数据的缓冲区（buf）
-            regs = modbus_read_registers(rtuctl[i].ctx, 0x01, 0x03, buf1);
+            // 参数3：读取寄存器的数量（0x01）
+            // 参数4：用于存储读取数据的缓冲区（buf1）
+            regs = modbus_read_registers(rtuctl[i].ctx, 0x01, 0x01, buf1);
             if (regs == -1)
             {
                 printf("GUANGGAN传感器读取失败\n");
                 return -1;
             }
-            break;
+
+            return (int)buf1[0]; // 返回读取到的第一个寄存器的值
         }
     }
 
-    return ;
+    printf("没有找到GUANGGAN传感器\n");
+    return -1; 
 }

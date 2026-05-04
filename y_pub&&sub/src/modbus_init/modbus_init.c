@@ -1,9 +1,9 @@
-#include "modbus_init/modbus_init.h"
+#include "modbus_init.h"
 
 modbus_serial_t arr_sensor[SIZE];
 
-// 定义一个静态函数，用于注册Modbus串口
-static int modbus_serial_registers(modbus_serial_t *arr_sensor)
+// 定义一个函数，用于注册Modbus串口
+int modbus_serial_registers(modbus_serial_t *arr_sensor)
 {
     read_uci();
     if (!name)
